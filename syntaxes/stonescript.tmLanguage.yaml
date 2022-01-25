@@ -1,36 +1,36 @@
 ---
-"$schema": https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
+'$schema': https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json
 name: Stonescript
 scopeName: source.txt
 patterns:
-  - include: "#comments"
-  - include: "#global_functions"
-  - include: "#global_variables"
-  - include: "#operators"
-  - include: "#control"
-  - include: "#classes"
-  - include: "#variable_reference"
-  - include: "#output_basic"
-  - include: "#keywords"
-  - include: "#constants"
-  - include: "#hex_colours"
-  - include: "#strings"
-  - include: "#ascii"
-  - include: "#functions"
+  - include: '#comments' #备注
+  - include: '#global_functions' #全局方法
+  - include: '#global_variables' #全局变量
+  - include: '#operators' #符号
+  - include: '#control' #分支语句
+  - include: '#classes' #类
+  - include: '#variable_reference' #引用标零
+  - include: '#output_basic' #多行拼接
+  - include: '#keywords' #关键字
+  - include: '#constants' #常量
+  - include: '#hex_colours' #颜色
+  - include: '#strings' #字符串
+  - include: '#ascii'
+  - include: '#functions' #方法
 repository:
   comments:
     name: comment.line.double-slash.stonescript
-    begin: "//"
+    begin: '//'
     end: "\n"
 
   global_functions:
     patterns:
-      - match: '\b(rng|equip|equipL|equipR|activate|loadout)\b'
+      - match: '\b(rng|rngf|equip|equipL|equipR|activate|loadout)\b'
         name: keyword.control.stonescript
 
   global_variables:
     patterns:
-      - match: '\b(time|hp|maxhp|maxarmor|totaltime|face|key|armor)\b'
+      - match: '\b(time|hp|maxhp|maxarmor|totaltime|face|key|armor|play|player|screen|utc|brew|res|input|totalgp|pos|ai)\b'
         name: variable.language.stonescript
 
   operators:
@@ -47,14 +47,14 @@ repository:
 
   classes:
     patterns:
-      - match: '\b(loc|foe|pos|debuffs|harvest|pickup|ai|screen)\b'
+      - match: '\b(loc|foe|pos|buffs|debuffs|harvest|pickup|ai)\b'
         name: support.class.stonescript
       - match: '\b(name|state|time|distance|count|(?<=screen\.[xyz])\w)\b'
         name: support.property-value.stonescript
 
   functions:
     patterns:
-      - name: "support.function.stonescript"
+      - name: 'support.function.stonescript'
         match: "([A-Za-z_][A-Za-z0-9_]*)\\("
 
   variable_reference:
@@ -67,7 +67,7 @@ repository:
 
   output_basic:
     patterns:
-      - match: "^>`?"
+      - match: '^>`?'
         name: keyword.control.stonescript
 
   keywords:
@@ -88,11 +88,11 @@ repository:
 
   hex_colours:
     patterns:
-      - match: "(#[0-9a-fA-F]{6})"
+      - match: '(#[0-9a-fA-F]{6})'
         name: constant.other.color.stonescript
-      - match: "(#red|#white|#cyan|#yellow|#green|#blue)"
+      - match: '(#red|#white|#cyan|#yellow|#green|#blue)'
         name: constant.other.color.stonescript
-      - match: "(#rain[0-9a-fA-F]{2})"
+      - match: '(#rain[0-9a-fA-F]{2})'
         name: constant.other.color.stonescript
 
   strings:
@@ -105,16 +105,16 @@ repository:
 
   ascii:
     name: text
-    begin: "(ascii)"
+    begin: '(ascii)'
     beginCaptures:
       1:
         name: keyword.control
-    end: "(asciiend)"
+    end: '(asciiend)'
     endCaptures:
       1:
         name: keyword.control
     patterns:
-      - match: "#"
+      - match: '#'
         name: comment
       - match: '\^'
         name: keyword

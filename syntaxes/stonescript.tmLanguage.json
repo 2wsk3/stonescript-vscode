@@ -55,7 +55,7 @@
     "global_functions": {
       "patterns": [
         {
-          "match": "\\b(rng|equip|equipL|equipR|activate|loadout)\\b",
+          "match": "\\b(rng|rngf|equip|equipL|equipR|activate|loadout)\\b",
           "name": "keyword.control.stonescript"
         }
       ]
@@ -63,7 +63,7 @@
     "global_variables": {
       "patterns": [
         {
-          "match": "\\b(time|hp|maxhp|maxarmor|totaltime|face|key|armor)\\b",
+          "match": "\\b(time|hp|maxhp|maxarmor|totaltime|face|key|armor|play|player|screen|utc|brew|res|input|totalgp|pos|ai)\\b",
           "name": "variable.language.stonescript"
         }
       ]
@@ -91,7 +91,7 @@
     "classes": {
       "patterns": [
         {
-          "match": "\\b(loc|foe|pos|debuffs|harvest|pickup|ai|screen)\\b",
+          "match": "\\b(loc|foe|pos|buffs|debuffs|harvest|pickup|ai)\\b",
           "name": "support.class.stonescript"
         },
         {
