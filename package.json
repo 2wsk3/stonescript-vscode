@@ -49,10 +49,10 @@
 		"js-yaml": "^3.14.0"
 	},
 	"bugs": {
-		"url": "https://github.com/2wsk3/vscode-plugin-demo/issues"
+		"url": "https://github.com/2wsk3/stonescript-vscode/issues"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/2wsk3/vscode-plugin-demo"
+		"url": "https://github.com/2wsk3/stonescript-vscode"
 	}
 }
