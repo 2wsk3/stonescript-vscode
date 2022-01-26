@@ -4,17 +4,17 @@
 	"description": "Stone Story RPG Stonescript扩展",
 	"version": "0.0.1",
 	"publisher": "sykblock",
-	"repository": "https://github.com/2wsk3/stonescript-vscode",
 	"keywords": [
 		"StoneScript",
 		"Stone Story RPG",
 		"stone script"
 	],
+	"icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.50.0"
 	},
 	"activationEvents": [
-		"*"
+		"onLanguage:stonescript"
 	],
 	"main": "./src/extension",
 	"scripts": {
@@ -47,5 +47,12 @@
 	},
 	"devDependencies": {
 		"js-yaml": "^3.14.0"
+	},
+	"bugs": {
+		"url": "https://github.com/2wsk3/vscode-plugin-demo/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/2wsk3/vscode-plugin-demo"
 	}
 }
