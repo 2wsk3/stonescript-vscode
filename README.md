@@ -1,11 +1,13 @@
 # stonescript
 
-This is a stonescript language support extension.
+这是一个 stonescript 语言支持扩展.
+扩展了代码自动文件和悬停显示注释
 
-## Features
+## 特征
 
-Currently only does very basic syntax highlighting
+目前支持语法高亮、自动完成、悬停显示
+暂不支持语法检测
 
-## Known Issues
+## 已知的问题
 
-The game uses `.txt` to read script files so I can only assign the extension to txt files which means vscode assumes every txt files are stonescript files.
+游戏使用`.txt`读取脚本文件，因此我只能将扩展名分配给 txt 文件，这意味着 vscode 假定每个 txt 文件都是 stonescript 文件。
