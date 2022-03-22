@@ -7,6 +7,9 @@
       "include": "#comments"
     },
     {
+      "include": "#block_Comment"
+    },
+    {
       "include": "#global_functions"
     },
     {
@@ -51,6 +54,11 @@
       "name": "comment.line.double-slash.stonescript",
       "begin": "//",
       "end": "\n"
+    },
+    "block_Comment": {
+      "name": "comment.block.documentation.stonescript",
+      "begin": "/\\*",
+      "end": "\\*/"
     },
     "global_functions": {
       "patterns": [

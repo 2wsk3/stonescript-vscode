@@ -1,9 +1,13 @@
-# Change Log
+# 更新日志
 
-All notable changes to the "stonescript" extension will be documented in this file.
+## [0.0.3]
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- 添加块级注释识别
 
-## [Unreleased]
+## [0.0.2]
 
-- Initial release
+- 添加语法高亮、自动完成、悬停显示
+
+## [0.0.1]
+
+- 初始化项目

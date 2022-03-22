@@ -3,13 +3,14 @@
 name: Stonescript
 scopeName: source.txt
 patterns:
-  - include: '#comments' #备注
+  - include: '#comments' #注释
+  - include: '#block_Comment' #多行注释
   - include: '#global_functions' #全局方法
   - include: '#global_variables' #全局变量
   - include: '#operators' #符号
   - include: '#control' #分支语句
   - include: '#classes' #类
-  - include: '#variable_reference' #引用标零
+  - include: '#variable_reference' #引用变量
   - include: '#output_basic' #多行拼接
   - include: '#keywords' #关键字
   - include: '#constants' #常量
@@ -22,6 +23,11 @@ repository:
     name: comment.line.double-slash.stonescript
     begin: '//'
     end: "\n"
+
+  block_Comment:
+    name: comment.block.documentation.stonescript
+    begin: '/\*'
+    end: '\*/'
 
   global_functions:
     patterns:

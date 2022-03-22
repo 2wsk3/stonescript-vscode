@@ -14,6 +14,9 @@ function provideHover(document, position, token) {
 	const wordposition = document.getWordRangeAtPosition(position)
 	const word = document.getText(wordposition)
 	const line = document.lineAt(position)
+	if (line.text.startsWith('//')) {
+		return
+	}
 	let list = [
 		{ id: 'loc', name: '玩家正在访问的当前位置' },
 		{ id: 'loc.id', name: '当前位置的id' },
@@ -211,6 +214,8 @@ function provideHover(document, position, token) {
 				let index = line.text.indexOf(item.id, wordposition.start.character - len)
 				if (index > -1) {
 					return new vscode.Hover(item.name)
+					// let url='https://www.sykblock.love/banner2.png';
+					// return new vscode.Hover(new vscode.MarkdownString(`![](${url}|width=240)`))
 				}
 			}
 		}
