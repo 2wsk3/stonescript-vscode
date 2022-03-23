@@ -11,5 +11,3 @@
 ## 已知的问题
 
 游戏使用`.txt`读取脚本文件，因此我只能将扩展名分配给 txt 文件，这意味着 vscode 假定每个 txt 文件都是 stonescript 文件。
-
-![测试](https://www.sykblock.love/1.gif)
